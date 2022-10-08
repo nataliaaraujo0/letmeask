@@ -8,6 +8,7 @@ export const theme = extendTheme({
     },
     danger: {
       "50": "#E73F5D",
+      "60": "#dc3b59",
     },
     pink: {
       "20": "#D67EE2",
@@ -23,7 +24,7 @@ export const theme = extendTheme({
     global: {
       body: {
         bg: "purple.90",
-        color: "gray.300",
+        color: "white",
       },
     },
   },
