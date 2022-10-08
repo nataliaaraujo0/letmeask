@@ -15,8 +15,8 @@ export function Home() {
       <MainContent>
         <Flex flexDir="column" w="100%" maxW="320px" textAlign="center">
           <Image src={logoImg} boxSize="200" alignSelf="center" />
-          <Button bg="danger.50" _hover={{ background: "danger.60" }}>
-            <GoogleLogo size={32} />
+          <Button bg="danger.50" _hover={{ background: "danger.60" }} gap="2">
+            <GoogleLogo size={32} weight="bold" />
             <p> Crie sua sala com o Google</p>
           </Button>
           <SeparetorContent>ou entre em uma sala</SeparetorContent>
