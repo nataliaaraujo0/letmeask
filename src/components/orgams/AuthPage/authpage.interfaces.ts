@@ -1,5 +1,9 @@
 import { ReactElement } from "react";
 
+export type ExistingRoomProps = {
+  title: string;
+  subtitle: string;
+};
 export type FormProps = {
   name?: string;
   type?: string;
@@ -12,11 +16,13 @@ export type AsideProps = {
 };
 export interface AuthPageProps {
   illustration?: string;
-  asides?: AsideProps[];
+  aside?: AsideProps;
   buttonGoogleAuthentication?: ReactElement;
   separetor?: ReactElement;
-  forms?: FormProps[];
+  form?: FormProps;
   nameButtonSubmit?: string;
   onClickAuthentication?: () => void;
   onClickSubmit?: () => void;
+  onClickRoomExisting?: () => void;
+  existingroom?: ExistingRoomProps;
 }
