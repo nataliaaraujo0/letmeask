@@ -12,6 +12,7 @@ export function NewRoom() {
           </strong>
         }
         separetor={<></>}
+        nameButtonSubmit="Criar sala"
       />
     </>
   );
