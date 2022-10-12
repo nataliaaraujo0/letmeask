@@ -13,11 +13,12 @@ import {
 import { ArrowSquareRight, GoogleLogo } from "phosphor-react";
 import { AsideContent, MainContent, SeparetorContent } from "./authpage.styles";
 import { MocksHelpers } from "./mocks";
+import { useNavigations } from "../../../hooks/useRouters/useNavigation";
+
 const { formMock, existingRoomMock, asideMock } = MocksHelpers();
 
 export function AuthPage({
   onClickAuthentication = () => {},
-  onClickRoomExisting = () => {},
   onClickSubmit = () => {},
   aside = asideMock,
 
@@ -45,6 +46,7 @@ export function AuthPage({
   nameButtonSubmit = "Entrar na sala",
   existingroom = existingRoomMock,
 }: AuthPageProps) {
+  const { navigateToRoomExisting } = useNavigations();
   return (
     <Flex height="100vh">
       <AsideContent key={aside.id}>
@@ -84,13 +86,15 @@ export function AuthPage({
             <ArrowSquareRight size={32} />
             {nameButtonSubmit}
           </Button>
-          <Text color={"purple.90"} marginTop="8px">
+          <Text color={"purple.90"} marginTop="8px" fontSize="14px">
             {existingroom.title}
           </Text>
           <Text
             color={"#E559F9"}
             cursor="pointer"
-            onClick={onClickRoomExisting}
+            onClick={navigateToRoomExisting}
+            fontSize="15px"
+            fontWeight="bold"
           >
             {existingroom.subtitle}
           </Text>

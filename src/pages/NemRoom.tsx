@@ -1,5 +1,4 @@
 import { AuthPage } from "../components/orgams/AuthPage";
-
 export function NewRoom() {
   return (
     <>

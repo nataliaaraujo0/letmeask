@@ -23,6 +23,6 @@ export interface AuthPageProps {
   nameButtonSubmit?: string;
   onClickAuthentication?: () => void;
   onClickSubmit?: () => void;
-  onClickRoomExisting?: () => void;
+  navigateToNewRoom?: () => void;
   existingroom?: ExistingRoomProps;
 }
