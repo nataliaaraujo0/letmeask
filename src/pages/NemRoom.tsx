@@ -1,5 +1,9 @@
 import { AuthPage } from "../components/orgams/AuthPage";
+//import { useAuth } from "../hooks/useAuth";
+
 export function NewRoom() {
+  //const { user } = useAuth();
+
   return (
     <>
       <AuthPage
