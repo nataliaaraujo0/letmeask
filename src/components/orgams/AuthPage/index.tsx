@@ -80,17 +80,18 @@ export function AuthPage({
               bg="white"
               color="purple.600"
             />
+            <Button
+              type="submit"
+              bg="purple.600"
+              marginTop="16px"
+              _hover={{ background: "purple.700" }}
+              onClick={onClickSubmit}
+            >
+              <ArrowSquareRight size={32} />
+              {nameButtonSubmit}
+            </Button>
           </FormControl>
-          <Button
-            type="submit"
-            bg="purple.600"
-            marginTop="16px"
-            _hover={{ background: "purple.700" }}
-            onClick={onClickSubmit}
-          >
-            <ArrowSquareRight size={32} />
-            {nameButtonSubmit}
-          </Button>
+
           <Text color={"purple.90"} marginTop="8px" fontSize="14px">
             {existingroom.title}
           </Text>

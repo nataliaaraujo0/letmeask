@@ -3,8 +3,10 @@ import { AuthPage } from "../components/orgams/AuthPage";
 import { useAuth } from "../hooks/useAuth";
 import { database } from "../services/firebase";
 //import { useAuth } from "../hooks/useAuth";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export function NewRoom() {
+  let navigate = useNavigate();
   const { user } = useAuth();
   const [newRoom, setNewRoom] = useState("");
 
@@ -22,6 +24,9 @@ export function NewRoom() {
       title: newRoom,
       authorId: user?.id,
     });
+
+    navigate(`/rooms/${firebaseRoom.key}`);
+    console.log(window.location);
   }
 
   return (
