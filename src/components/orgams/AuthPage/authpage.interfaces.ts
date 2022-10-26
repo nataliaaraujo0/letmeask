@@ -22,7 +22,10 @@ export interface AuthPageProps {
   form?: FormProps;
   nameButtonSubmit?: string;
   onClickAuthentication?: () => void;
-  onClickSubmit?: () => void;
+  onClickSubmit: (event: any) => void;
   navigateToNewRoom?: () => void;
+  onSubmitForm: (event: any) => void;
+  onChange: (event: any) => void;
   existingroom?: ExistingRoomProps;
+  value: string;
 }

@@ -3,19 +3,20 @@ import { useAuth } from "../hooks/useAuth";
 import { useNavigations } from "../hooks/useRouters/useNavigation";
 
 export function Home() {
-  const { handleCreateRoom } = useNavigations();
+  const { navigateToCreateRoom } = useNavigations();
 
-  async function handleCreateRoomm() {
+  async function handleCreateRoom() {
     const { signInWithGoogle, user } = useAuth();
     if (!user) {
       await signInWithGoogle();
     }
-    handleCreateRoom();
+
+    navigateToCreateRoom();
   }
 
   return (
     <>
-      <AuthPage onClickAuthentication={handleCreateRoomm} existingroom={{}} />
+      <AuthPage onClickAuthentication={handleCreateRoom} existingroom={{}} />
     </>
   );
 }

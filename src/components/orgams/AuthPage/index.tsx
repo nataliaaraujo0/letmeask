@@ -18,8 +18,11 @@ import { useNavigations } from "../../../hooks/useRouters/useNavigation";
 const { formMock, existingRoomMock, asideMock } = MocksHelpers();
 
 export function AuthPage({
+  value,
+  onChange,
+  onSubmitForm,
   onClickAuthentication = () => {},
-  onClickSubmit = () => {},
+  onClickSubmit,
   aside = asideMock,
 
   buttonGoogleAuthentication = (
@@ -61,8 +64,10 @@ export function AuthPage({
           {buttonGoogleAuthentication}
           {separetor}
 
-          <FormControl>
+          <FormControl onClick={onSubmitForm}>
             <Input
+              onChange={onChange}
+              value={value}
               name={form.name}
               type={form.type}
               placeholder={form.placeholder}

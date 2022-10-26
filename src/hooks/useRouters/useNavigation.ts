@@ -4,7 +4,7 @@ export const useNavigations = () => {
   let navigate = useNavigate();
 
   //navegar para a rota de newRooms
-  function handleCreateRoom() {
+  function navigateToCreateRoom() {
     navigate("/rooms/new");
   }
 
@@ -14,7 +14,7 @@ export const useNavigations = () => {
   }
 
   return {
-    handleCreateRoom,
+    navigateToCreateRoom,
     navigateToRoomExisting,
   };
 };
