@@ -4,9 +4,9 @@ import { useNavigations } from "../hooks/useRouters/useNavigation";
 
 export function Home() {
   const { navigateToCreateRoom } = useNavigations();
+  const { signInWithGoogle, user } = useAuth();
 
   async function handleCreateRoom() {
-    const { signInWithGoogle, user } = useAuth();
     if (!user) {
       await signInWithGoogle();
     }
